@@ -1,0 +1,25 @@
+{
+  "name": "heyfreela-api",
+  "version": "1.0.0",
+  "description": "NodeJS API for HeyFreela features consumption",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogeraraujo90/heyfreela-api.git"
+  },
+  "keywords": [
+    "webapp",
+    "business",
+    "technology",
+    "development"
+  ],
+  "author": "Roger Araujo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rogeraraujo90/heyfreela-api/issues"
+  },
+  "homepage": "https://github.com/rogeraraujo90/heyfreela-api#readme"
+}
