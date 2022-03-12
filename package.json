@@ -6,7 +6,8 @@
   "scripts": {
     "dev-start": "ts-node-dev --transpile-only src/app.ts",
     "lint": "prettier --write . && eslint src/*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Warning: no tests yet\"",
+    "ci": "npm run lint && npm test"
   },
   "repository": {
     "type": "git",
