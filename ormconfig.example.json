@@ -1,0 +1,18 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "<Add your db user here>",
+  "password": "<Add your db user's password here>",
+  "database": "hey_freela",
+  "synchronize": true,
+  "logging": false,
+  "entities": ["src/infra/database/typeorm/entity/**/*.ts"],
+  "migrations": ["src/infra/database/typeorm/migration/**/*.ts"],
+  "subscribers": ["src/infra/database/typeorm/subscriber/**/*.ts"],
+  "cli": {
+    "entitiesDir": "src/infra/database/typeorm/entity",
+    "migrationsDir": "src/infra/database/typeorm/migration",
+    "subscribersDir": "src/infra/database/typeorm/subscriber"
+  }
+}
