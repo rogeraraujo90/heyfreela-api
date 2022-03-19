@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "paths": {
       "@modules/*": ["modules/*"],
-      "@database/*": ["infra/database/*"],
+      "@database/*": ["infra/database/*"]
     }
   },
   "extends": "@tsconfig/node16/tsconfig.json",
