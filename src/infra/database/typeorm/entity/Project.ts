@@ -1,4 +1,10 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import ProjectModel from '@modules/projects/ProjectModel';
 
 @Entity()
@@ -11,9 +17,18 @@ export default class Project implements ProjectModel {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column('text')
+  @Column({ type: 'text', nullable: false })
   description!: string;
 
-  @Column()
+  @Column({ nullable: false })
   name!: string;
+
+  @Column({ type: 'json' })
+  technologies!: String[];
+
+  @CreateDateColumn()
+  createdAt!: Date;
+
+  @UpdateDateColumn()
+  updatedAt!: Date;
 }

@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import ProjectsService from './ProjectsService';
 import { container } from 'tsyringe';
+import { instanceToInstance } from 'class-transformer';
 
 /**
  * @class ProjectsAPI
@@ -14,6 +15,6 @@ export default class ProjectsAPI {
     const service = container.resolve(ProjectsService);
     const projects = await service.list();
 
-    return response.json(projects);
+    return response.json(instanceToInstance(projects));
   }
 }
