@@ -7,8 +7,7 @@
     "ci": "npm run lint && npm test",
     "dev-start": "ts-node-dev -r tsconfig-paths/register --transpile-only src/infra/www/server.ts",
     "eslint": "eslint \"**/*.{ts,tsx}\"",
-    "lint": "npm run prettier & npm run eslint & npm run ts-check",
-    "prettier": "prettier --check .",
+    "lint": "npm run eslint & npm run ts-check",
     "test": "jest --collect-coverage",
     "ts-check": "tsc --noemit",
     "typeorm": "node -r tsconfig-paths/register --require ts-node/register ./node_modules/typeorm/cli.js"
