@@ -2,14 +2,14 @@
   "compilerOptions": {
     "sourceMap": true,
     "outDir": "./dist",
-    "rootDir": "./src",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "baseUrl": "./src",
     "moduleResolution": "node",
+    "baseUrl": ".",
     "paths": {
-      "@modules/*": ["modules/*"],
-      "@database/*": ["infra/database/*"]
+      "@app": ["src/app.ts"],
+      "@modules/*": ["src/modules/*"],
+      "@database/*": ["src/infra/database/*"]
     }
   },
   "extends": "@tsconfig/node16/tsconfig.json",

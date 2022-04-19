@@ -8,3 +8,4 @@ temp/
 # Configuration files with secrets
 ormconfig.json
 .env
+coverage/
