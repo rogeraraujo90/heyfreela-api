@@ -28,3 +28,7 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm run ci
+      - name: Publish code coverage
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: 02dc2cc74d1397cf6cd81bce166ef014c380416e916e89a6fba87d4c6b2632e9
