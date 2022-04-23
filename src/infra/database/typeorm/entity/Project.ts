@@ -4,8 +4,11 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
 } from 'typeorm';
 import ProjectModel from '@modules/projects/ProjectModel';
+import UserModel from '@modules/users/UserModel';
+import User from '@database/typeorm/entity/User';
 
 @Entity()
 /**
@@ -25,6 +28,9 @@ export default class Project implements ProjectModel {
 
   @Column({ type: 'json' })
   technologies!: String[];
+
+  @ManyToOne((type) => User, { nullable: false, eager: true })
+  owner!: UserModel;
 
   @CreateDateColumn()
   createdAt!: Date;
